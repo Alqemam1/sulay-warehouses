@@ -289,4 +289,27 @@
     [nameI, phoneI].forEach(function (i) { i.addEventListener("input", function () { if (i.getAttribute("aria-invalid") === "true") setErr(i, false); }); });
   }
 
+  /* ---------- فيديو الدرون في البطل ----------
+     يبدأ بالصورة الثابتة، ثم يحمّل الفيديو بعد اكتمال الصفحة ويظهر تدريجيًا.
+     لا يُحمّل مع "تقليل الحركة" أو "توفير البيانات" أو الشبكات البطيئة. */
+  (function heroVideo() {
+    var v = document.querySelector(".hero__video");
+    if (!v || reduceMotion) return;
+    var c = navigator.connection || {};
+    if (c.saveData || /(^|-)2g$/.test(c.effectiveType || "")) return;
+    function start() {
+      var wide = window.matchMedia("(min-aspect-ratio: 1/1) and (min-width: 1100px)").matches;
+      v.src = wide ? v.getAttribute("data-wide") : v.getAttribute("data-sm");
+      v.addEventListener("playing", function () { v.classList.add("is-on"); }, { once: true });
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+    }
+    if (document.readyState === "complete") setTimeout(start, 300);
+    else window.addEventListener("load", function () { setTimeout(start, 300); });
+    document.addEventListener("visibilitychange", function () {
+      if (!v.src) return;
+      if (document.hidden) v.pause(); else { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+    });
+  })();
+
 })();
