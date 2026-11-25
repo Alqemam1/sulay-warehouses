@@ -36,3 +36,6 @@ python3 scripts/stamp_versions.py
 python3 scripts/build_images.py   # الصور من assets/ إلى img/
 node scripts/render_static.js     # og.jpg والأيقونات (يتطلب Playwright)
 ```
+
+## عدّاد الزيارات
+الموقع يستخدم Vercel Web Analytics (الخطة المجانية). الإحصائيات (عدد الزوار، الصفحات، الدول، الأجهزة، مصدر الزيارة) تظهر فقط لأصحاب المشروع من لوحة Vercel: المشروع ← Analytics. لا يظهر أي عدّاد للزوار في الموقع.
