@@ -72,6 +72,7 @@
     var past = yy > heroH * 0.6;
     if (fab) fab.classList.toggle("is-visible", past);
     if (mbar) mbar.classList.toggle("is-visible", past);
+    if (yy < heroH * 0.5) $$(".nav a.is-active").forEach(function (a) { a.classList.remove("is-active"); });
   }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
@@ -197,8 +198,8 @@
   });
   setActive("w12");
 
-  /* ---------- 6) الأسئلة ---------- */
-  $$(".acc__btn").forEach(function (btn) {
+  /* ---------- 6) الأسئلة + المرافق (تتوسع عند الضغط) ---------- */
+  $$(".acc__btn, .fac__btn").forEach(function (btn) {
     btn.addEventListener("click", function () {
       var open = btn.getAttribute("aria-expanded") === "true";
       btn.setAttribute("aria-expanded", open ? "false" : "true");
@@ -288,38 +289,4 @@
     [nameI, phoneI].forEach(function (i) { i.addEventListener("input", function () { if (i.getAttribute("aria-invalid") === "true") setErr(i, false); }); });
   }
 
-  /* ---------- 9) الخريطة المصغّرة (Leaflet + OSM) تُحمّل عند الاقتراب ---------- */
-  var mm = $("#minimap");
-  function loadMap() {
-    if (!mm || mm.dataset.loaded) return;
-    mm.dataset.loaded = "1";
-    var css = document.createElement("link");
-    css.rel = "stylesheet"; css.href = "vendor/leaflet/leaflet.css";
-    document.head.appendChild(css);
-    var s = document.createElement("script");
-    s.src = "vendor/leaflet/leaflet.js";
-    s.onload = function () {
-      var L = window.L;
-      var map = L.map(mm, { scrollWheelZoom: false, dragging: !L.Browser.mobile, tap: false, zoomControl: true, attributionControl: true })
-        .setView([C.lat, C.lng], C.mapZoom || 15);
-      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
-      }).addTo(map);
-      var icon = L.divIcon({
-        className: "", iconSize: [38, 48], iconAnchor: [19, 46],
-        html: '<svg class="pin" viewBox="0 0 38 48" aria-hidden="true"><path d="M19 47S3 30.5 3 19a16 16 0 0 1 32 0C35 30.5 19 47 19 47Z" fill="#262626" stroke="#CFA77B" stroke-width="2"/><g transform="translate(8 13) scale(.2)" fill="none" stroke="#CFA77B" stroke-width="9"><path d="M5 26V16L33 6l10 4"/><path d="M25 26V16L53 6l28 10v10"/><path d="M64 10l9-4 28 10v10"/><path d="M5 26h96"/></g></svg>'
-      });
-      L.marker([C.lat, C.lng], { icon: icon, title: "مستودعات السلي", keyboard: false })
-        .addTo(map)
-        .on("click", function () { window.open(C.mapsUrl, "_blank", "noopener"); });
-      var fb = $(".minimap__fallback", mm); if (fb) fb.remove();
-    };
-    document.body.appendChild(s);
-  }
-  if (mm) {
-    if ("IntersectionObserver" in window) {
-      var mio = new IntersectionObserver(function (en) { if (en[0].isIntersecting) { loadMap(); mio.disconnect(); } }, { rootMargin: "400px" });
-      mio.observe(mm);
-    } else loadMap();
-  }
 })();

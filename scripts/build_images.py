@@ -39,7 +39,9 @@ def crop_frac(im, top, bottom):
 
 # Hero: portrait for phones, landscape crop for wide screens
 sky = Image.open(SRC / "photos/warehouses-sky-wide.jpg")
-save_variants(sky.crop((0, 260, sky.width, sky.height)), "hero-portrait", [640, 960, 1280])
+# phones: warehouse-focused crop of the oblique aerial shot so the roofs sit behind the title
+a1 = Image.open(SRC / "photos/aerial-angle-1.jpg")
+save_variants(a1.crop((600, 0, 2300, 1440)), "hero-mobile", [640, 960, 1280], q_webp=70, q_avif=42)
 # landscape 16:9 crop keeping horizon + buildings
 w = sky.width
 h = round(w * 9 / 16)

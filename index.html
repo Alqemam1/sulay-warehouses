@@ -26,10 +26,10 @@
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-  <link rel="preload" as="image" type="image/avif"
-        imagesrcset="img/hero-portrait-640.avif 640w, img/hero-portrait-960.avif 960w, img/hero-portrait-1280.avif 1280w"
+  <link rel="preload" as="image" type="image/avif" fetchpriority="high"
+        imagesrcset="img/hero-mobile-640.avif 640w, img/hero-mobile-960.avif 960w, img/hero-mobile-1280.avif 1280w"
         imagesizes="100vw" media="(max-aspect-ratio: 1/1)">
-  <link rel="preload" as="image" type="image/avif"
+  <link rel="preload" as="image" type="image/avif" fetchpriority="high"
         imagesrcset="img/hero-wide-1280.avif 1280w, img/hero-wide-1920.avif 1920w"
         imagesizes="100vw" media="(min-aspect-ratio: 1/1)">
   <link rel="stylesheet" href="css/style.css">
@@ -54,6 +54,10 @@
     <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3 5 6v5.5c0 4.3 3 7.7 7 9 4-1.3 7-4.7 7-9V6z"/><path d="m9 12 2.2 2.2L15.5 10" stroke-linecap="round"/></g></symbol>
 
     <!-- facility icons (line style, like the brochure) -->
+    <symbol id="g-pin" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M24 43S11 30.5 11 20a13 13 0 0 1 26 0c0 10.5-13 23-13 23Z"/><path d="M17 22v-4l7-4 7 4v4"/><path d="M17 22h14"/></g></symbol>
+    <symbol id="g-gates" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M6 40V18L24 8l18 10v22"/><path d="M12 40V26h8v14M28 40V26h8v14"/><path d="M12 31h8M28 31h8M12 36h8M28 36h8"/></g></symbol>
+    <symbol id="g-cold" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M5 24 18 15l13 9v17H5z"/><path d="M11 41V30h14v11"/><path d="M37 6v20M30 10l14 12M44 10 30 22"/><path d="M34 6l3 3 3-3M34 26l3-3 3 3"/></g></symbol>
+    <symbol id="g-ready" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><rect x="8" y="8" width="32" height="34" rx="2"/><path d="M8 18h32M8 30h32M24 8v34"/><path d="m29 13 2 2 4-4M13 24l2 2 4-4M29 36l2 2 4-4"/></g></symbol>
     <symbol id="f-workers" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M6 42V16L18 6l12 10v4"/><path d="M11 22h3M11 28h3M11 34h3M18 22h3"/><path d="M26 42c0-6 3.6-9 8-9s8 3 8 9z"/><circle cx="34" cy="25" r="4.5"/><path d="M28.5 22.5a5.5 5.5 0 0 1 11 0z"/><path d="M4 42h40"/></g></symbol>
     <symbol id="f-office" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><rect x="22" y="8" width="18" height="12" rx="1"/><path d="M31 20v4M27 24h8"/><path d="M4 26h28M8 26v16M28 26v16M8 32h8v10"/><path d="M38 28v14M38 28h4l-1 8h-6"/></g></symbol>
     <symbol id="f-power" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M4 20 22 9l18 11"/><path d="M8 18v18h22"/><rect x="13" y="22" width="14" height="9"/><path d="M20 22v9"/><rect x="31" y="28" width="13" height="14" rx="1.5"/><path d="m38.5 31-3 5h4l-3 4"/></g></symbol>
@@ -89,9 +93,9 @@
       <picture>
         <source media="(min-aspect-ratio: 1/1)" type="image/avif" srcset="img/hero-wide-1280.avif 1280w, img/hero-wide-1920.avif 1920w" sizes="100vw">
         <source media="(min-aspect-ratio: 1/1)" type="image/webp" srcset="img/hero-wide-1280.webp 1280w, img/hero-wide-1920.webp 1920w" sizes="100vw">
-        <source type="image/avif" srcset="img/hero-portrait-640.avif 640w, img/hero-portrait-960.avif 960w, img/hero-portrait-1280.avif 1280w" sizes="100vw">
-        <source type="image/webp" srcset="img/hero-portrait-640.webp 640w, img/hero-portrait-960.webp 960w, img/hero-portrait-1280.webp 1280w" sizes="100vw">
-        <img src="img/hero-portrait-960.webp" width="960" height="1015" alt="لقطة جوية لمستودعات السلي بأسقفها الذهبية وسط المنطقة الصناعية في الرياض وقت الغروب" fetchpriority="high" decoding="async">
+        <source type="image/avif" srcset="img/hero-mobile-640.avif 640w, img/hero-mobile-960.avif 960w, img/hero-mobile-1280.avif 1280w" sizes="100vw">
+        <source type="image/webp" srcset="img/hero-mobile-640.webp 640w, img/hero-mobile-960.webp 960w, img/hero-mobile-1280.webp 1280w" sizes="100vw">
+        <img src="img/hero-mobile-960.webp" width="960" height="813" alt="لقطة جوية لمستودعات السلي تُظهر أسقفها الذهبية والساحة الداخلية والشوارع المحيطة" fetchpriority="high" decoding="async">
       </picture>
     </div>
     <div class="hero__shade" aria-hidden="true"></div>
@@ -101,13 +105,11 @@
         <span class="badge-sale">للبيع</span>
         <span class="hero__exclusive">المسوّق الحصري: القمم للعقارات</span>
       </div>
-      <p class="hero__name">مستودعات السلي <span class="dot" aria-hidden="true">·</span> <span lang="en" dir="ltr">Sulay Warehouses</span></p>
       <h1 id="hero-title" class="hero__title">جاهزية لوجستية <br class="br-md">في قلب المملكة</h1>
       <p class="hero__loc">
         <svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>
         شمال السلي <span class="dot" aria-hidden="true">·</span> بالقرب من الدائري <span class="dot" aria-hidden="true">·</span> الرياض
       </p>
-      <p class="hero__facts"><strong>10,680 م²</strong> أرض <span class="dot" aria-hidden="true">·</span> <strong>4 مستودعات</strong> جاهزة <span class="dot" aria-hidden="true">·</span> جاف ومبرد</p>
       <div class="hero__actions">
         <a class="btn btn--primary btn--lg" data-wa href="https://wa.me/966567425775" target="_blank" rel="noopener">
           <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>اطلب التفاصيل عبر واتساب
@@ -139,7 +141,7 @@
           <span class="stat__label">واجهات <em>وبوابات متعددة</em></span>
         </li>
       </ul>
-      <p class="stats__about reveal">يمتد المشروع على مساحة إجمالية تبلغ 10,680 م²، وبإجمالي مسطح بناء يبلغ 6,908 م²، وبنسبة بناء 65%، ليقدم بيئة عملية مصممة لاستيعاب أنشطة التخزين الجاف والتخزين المبرد بكفاءة عالية.</p>
+      <p class="stats__about reveal">أرض 10,680 م² ومسطح بناء 6,908 م² بنسبة بناء 65%، في بيئة عملية مصممة للتخزين الجاف والمبرد بكفاءة عالية.</p>
     </div>
   </section>
 
@@ -149,7 +151,7 @@
       <header class="sec-head reveal">
         <p class="eyebrow">مكونات الموقع</p>
         <h2 class="sec-title" id="wh-title">4 مستودعات جاهزة</h2>
-        <p class="sec-lead">3 مستودعات للتخزين الجاف و1 للتخزين المبرد. اختر مستودعًا لتراه على المسقط.</p>
+        <p class="sec-lead">3 للتخزين الجاف و1 للتخزين المبرد. اختر مستودعًا لتراه على المسقط.</p>
       </header>
 
       <div class="wh">
@@ -160,7 +162,7 @@
               <source type="image/webp" srcset="img/site-plan-640.webp 640w, img/site-plan-960.webp 960w, img/site-plan-1254.webp 1254w" sizes="(min-width: 1000px) 560px, 100vw">
               <img src="img/site-plan-960.webp" width="1254" height="1254" loading="lazy" decoding="async" alt="المسقط العلوي لمستودعات السلي: الكتلة الكبيرة جنوبًا للمستودعين 1 و2، والمستودع 4 في الشمال الغربي، والمستودع 3 الصغير في الشمال الشرقي">
             </picture>
-            <svg class="plan__svg" viewBox="0 0 1254 1254" role="group" aria-label="مناطق المستودعات على المسقط">
+            <svg class="plan__svg" viewBox="0 0 1254 1254" preserveAspectRatio="xMidYMid slice" role="group" aria-label="مناطق المستودعات على المسقط">
               <g class="zone" data-zone="w12" tabindex="0" role="button" aria-label="المستودعان 1 و2 – تخزين جاف 4,245 م²">
                 <rect x="414" y="586" width="466" height="406"/>
                 <g class="zone__tag" transform="translate(647 789)"><rect x="-74" y="-36" width="148" height="72" rx="6"/><text y="13">1 - 2</text></g>
@@ -250,7 +252,7 @@
             </div>
           </article>
 
-          <p class="wh__total reveal"><span>الإجمالي</span> 4,245 + 654 + 2,009 = <b>6,908 م²</b> مسطح بناء</p>
+          <p class="wh__total reveal">إجمالي مسطح البناء: <b>6,908 م²</b></p>
 
           <details class="bounds reveal">
             <summary><span>حدود الأرض وأطوالها</span><svg class="ico" aria-hidden="true"><use href="#i-down"/></svg></summary>
@@ -285,28 +287,28 @@
         <p class="eyebrow">مميزات العقار</p>
         <h2 class="sec-title" id="ft-title">لماذا مستودعات السلي؟</h2>
       </header>
-      <div class="ft-grid">
-        <article class="ft reveal">
-          <span class="ft__no">01</span>
+      <ul class="ft-grid">
+        <li class="ft reveal">
+          <svg class="ft__ico" aria-hidden="true"><use href="#g-pin"/></svg>
           <h3>موقع مميز</h3>
-          <p>في شمال السلي، مركز لوجستي أساسي في الرياض، بسهولة وصول وتعدد في الطرق والمحاور.</p>
-        </article>
-        <article class="ft reveal">
-          <span class="ft__no">02</span>
+          <p>شمال السلي، مركز لوجستي أساسي بطرق ومحاور متعددة.</p>
+        </li>
+        <li class="ft reveal">
+          <svg class="ft__ico" aria-hidden="true"><use href="#g-gates"/></svg>
           <h3>3 واجهات</h3>
-          <p>ثلاث واجهات رئيسية وبوابات متعددة لحركة انسيابية وتفريغ الشاحنات بمختلف أحجامها (تريلات، دينا) دون تكدس.</p>
-        </article>
-        <article class="ft reveal">
-          <span class="ft__no">03</span>
+          <p>بوابات متعددة لتفريغ التريلات والدينا دون تكدس.</p>
+        </li>
+        <li class="ft reveal">
+          <svg class="ft__ico" aria-hidden="true"><use href="#g-cold"/></svg>
           <h3>تخزين متنوع</h3>
-          <p>تخزين جاف مكيّف وتخزين مبرد، خيار مثالي لشركات التجزئة والأغذية والأدوية.</p>
-        </article>
-        <article class="ft reveal">
-          <span class="ft__no">04</span>
+          <p>جاف مكيّف ومبرد، مثالي للتجزئة والأغذية والأدوية.</p>
+        </li>
+        <li class="ft reveal">
+          <svg class="ft__ico" aria-hidden="true"><use href="#g-ready"/></svg>
           <h3>مجهز بالكامل</h3>
-          <p>أرفف ومكيفات وأنظمة سلامة ومولدات، توفّر عليك تكاليف التأسيس الباهظة وتسرّع قرارك.</p>
-        </article>
-      </div>
+          <p>أرفف ومكيفات وأنظمة سلامة ومولدات، بلا تكاليف تأسيس.</p>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -316,33 +318,53 @@
       <header class="sec-head reveal">
         <p class="eyebrow">المرافق</p>
         <h2 class="sec-title" id="rd-title">جاهز للتشغيل فورًا</h2>
-        <p class="sec-lead">الموقع مجهز ليكون مركزًا لوجستيًا متكاملًا وجاهزًا للاستخدام الفوري.</p>
+        <p class="sec-lead">مركز لوجستي متكامل. اضغط على أي مرفق لتفاصيله.</p>
       </header>
       <ul class="fac">
         <li class="fac__item reveal">
-          <svg class="fac__ico" aria-hidden="true"><use href="#f-workers"/></svg>
-          <h3>مرافق العاملين</h3>
-          <p>مصلى، دورات مياه متعددة، غرف حراسة وأمن.</p>
+          <button class="fac__btn" type="button" aria-expanded="false" aria-controls="fac-1">
+            <svg class="fac__ico" aria-hidden="true"><use href="#f-workers"/></svg>
+            <span class="fac__t">مرافق العاملين</span>
+            <span class="fac__s">مصلى ودورات مياه وأمن</span>
+            <svg class="fac__plus ico" aria-hidden="true"><use href="#i-plus"/></svg>
+          </button>
+          <p class="fac__full" id="fac-1" hidden>مصلى، دورات مياه متعددة، غرف حراسة وأمن.</p>
         </li>
         <li class="fac__item reveal">
-          <svg class="fac__ico" aria-hidden="true"><use href="#f-office"/></svg>
-          <h3>المرافق الإدارية</h3>
-          <p>مكاتب إدارية مجهزة لإدارة العمليات ومراقبة المخزون.</p>
+          <button class="fac__btn" type="button" aria-expanded="false" aria-controls="fac-2">
+            <svg class="fac__ico" aria-hidden="true"><use href="#f-office"/></svg>
+            <span class="fac__t">المرافق الإدارية</span>
+            <span class="fac__s">مكاتب لإدارة العمليات</span>
+            <svg class="fac__plus ico" aria-hidden="true"><use href="#i-plus"/></svg>
+          </button>
+          <p class="fac__full" id="fac-2" hidden>مكاتب إدارية مجهزة لإدارة العمليات ومراقبة المخزون.</p>
         </li>
         <li class="fac__item reveal">
-          <svg class="fac__ico" aria-hidden="true"><use href="#f-power"/></svg>
-          <h3>الكهرباء والتقنية</h3>
-          <p>غرفة كهرباء رئيسية مستقلة، كاميرات مراقبة شاملة، تمديدات كهربائية متكاملة، ونقاط شحن للرافعات الشوكية الكهربائية.</p>
+          <button class="fac__btn" type="button" aria-expanded="false" aria-controls="fac-3">
+            <svg class="fac__ico" aria-hidden="true"><use href="#f-power"/></svg>
+            <span class="fac__t">الكهرباء والتقنية</span>
+            <span class="fac__s">غرفة كهرباء وكاميرات</span>
+            <svg class="fac__plus ico" aria-hidden="true"><use href="#i-plus"/></svg>
+          </button>
+          <p class="fac__full" id="fac-3" hidden>غرفة كهرباء رئيسية مستقلة، شبكة كاميرات مراقبة أمنية شاملة، تأسيس تمديدات كهربائية متكاملة، ونقاط شحن مخصصة للرافعات الشوكية الكهربائية.</p>
         </li>
         <li class="fac__item reveal">
-          <svg class="fac__ico" aria-hidden="true"><use href="#f-safety"/></svg>
-          <h3>اللوجستيات والسلامة</h3>
-          <p>منصات تفريغ هيدروليكية، بوابات تمرير سريعة، منصات ربط بين المستودعين (2) و(3)، مضخات وخزانات أرضية لنظام الرش الآلي، ومخارج طوارئ.</p>
+          <button class="fac__btn" type="button" aria-expanded="false" aria-controls="fac-4">
+            <svg class="fac__ico" aria-hidden="true"><use href="#f-safety"/></svg>
+            <span class="fac__t">اللوجستيات والسلامة</span>
+            <span class="fac__s">منصات تفريغ ورش آلي</span>
+            <svg class="fac__plus ico" aria-hidden="true"><use href="#i-plus"/></svg>
+          </button>
+          <p class="fac__full" id="fac-4" hidden>منصات تفريغ هيدروليكية، بوابات تمرير سريعة، منصات ربط بين المستودعين (2) و(3)، مضخات وخزانات مياه أرضية مخصصة لنظام الرش الآلي، ومخارج طوارئ.</p>
         </li>
         <li class="fac__item reveal">
-          <svg class="fac__ico" aria-hidden="true"><use href="#f-truck"/></svg>
-          <h3>غسيل الشاحنات</h3>
-          <p>منطقة مخصصة لغسيل الشاحنات مزودة بفتحات تصريف المياه.</p>
+          <button class="fac__btn" type="button" aria-expanded="false" aria-controls="fac-5">
+            <svg class="fac__ico" aria-hidden="true"><use href="#f-truck"/></svg>
+            <span class="fac__t">غسيل الشاحنات</span>
+            <span class="fac__s">منطقة مع تصريف مياه</span>
+            <svg class="fac__plus ico" aria-hidden="true"><use href="#i-plus"/></svg>
+          </button>
+          <p class="fac__full" id="fac-5" hidden>منطقة مخصصة لغسيل الشاحنات مزودة بفتحات تصريف المياه.</p>
         </li>
       </ul>
     </div>
@@ -356,7 +378,7 @@
           <p class="eyebrow">صور المشروع</p>
           <h2 class="sec-title" id="gl-title">المستودعات من الجو</h2>
         </div>
-        <p class="sec-note">اضغط على أي صورة لعرضها بملء الشاشة</p>
+        <p class="sec-note"><span class="only-m">اسحب للمزيد · </span>اضغط على الصورة للتكبير</p>
       </header>
       <ul class="gl">
         <li class="gl__item gl__item--a reveal">
@@ -416,43 +438,27 @@
   <!-- ===== الموقع ===== -->
   <section class="location" id="location" aria-labelledby="lc-title">
     <div class="container">
-      <header class="sec-head reveal">
-        <p class="eyebrow">الموقع</p>
-        <h2 class="sec-title" id="lc-title">شمال السلي · بالقرب من الدائري</h2>
-        <p class="sec-lead">موقع مميز في شمال السلي بمدينة الرياض، يتميز بسهولة الوصول وتعدد الطرق والمحاور.</p>
-      </header>
-
       <div class="lc">
-        <figure class="lc__map reveal">
-          <picture>
-            <source type="image/avif" srcset="img/location-map-640.avif 640w, img/location-map-1240.avif 1240w" sizes="(min-width: 1000px) 640px, 100vw">
-            <source type="image/webp" srcset="img/location-map-640.webp 640w, img/location-map-1240.webp 1240w" sizes="(min-width: 1000px) 640px, 100vw">
-            <img src="img/location-map-1240.webp" width="1240" height="900" loading="lazy" decoding="async" alt="خريطة الموقع من الكتيّب تُظهر المشروع بين طريق أبو عبيدة عامر بن الجراح وطريق الأمير محمد بن عبدالرحمن بن عبدالعزيز وطريق ابن العميد وطريق هارون الرشيد، بالقرب من الطريق الدائري الشرقي">
-          </picture>
-          <figcaption>خريطة الطرق المحيطة (من الكتيّب)</figcaption>
-        </figure>
-
         <div class="lc__side reveal">
-          <h3 class="lc__h">الطرق المحيطة</h3>
+          <p class="eyebrow">الموقع</p>
+          <h2 class="sec-title" id="lc-title">شمال السلي</h2>
+          <p class="sec-lead">بالقرب من الدائري، بسهولة وصول وتعدد في الطرق والمحاور.</p>
           <ul class="roads">
             <li>الطريق الدائري الشرقي</li>
             <li>طريق أبو عبيدة عامر بن الجراح</li>
             <li>طريق الأمير محمد بن عبدالرحمن بن عبدالعزيز</li>
-            <li>طريق ابن العميد</li>
-            <li>طريق هارون الرشيد</li>
-            <li>شارع جبل صقلية</li>
-            <li>شارع وادي بيدة</li>
           </ul>
-          <div class="minimap" id="minimap" role="region" aria-label="خريطة تفاعلية لموقع المستودعات">
-            <div class="minimap__fallback">
-              <svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>
-              <span>24.664919, 46.821394</span>
-            </div>
-          </div>
-          <a class="btn btn--primary btn--block" data-maps href="https://maps.app.goo.gl/PNKK8Bb3xH5HjBYRA" target="_blank" rel="noopener">
+          <a class="btn btn--primary" data-maps href="https://maps.app.goo.gl/PNKK8Bb3xH5HjBYRA" target="_blank" rel="noopener">
             <svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>افتح الموقع في خرائط قوقل
           </a>
         </div>
+        <figure class="lc__map reveal">
+          <picture>
+            <source type="image/avif" srcset="img/location-map-640.avif 640w, img/location-map-1240.avif 1240w" sizes="(min-width: 1000px) 680px, 100vw">
+            <source type="image/webp" srcset="img/location-map-640.webp 640w, img/location-map-1240.webp 1240w" sizes="(min-width: 1000px) 680px, 100vw">
+            <img src="img/location-map-1240.webp" width="1240" height="900" loading="lazy" decoding="async" alt="خريطة الموقع تُظهر المشروع بين طريق أبو عبيدة عامر بن الجراح وطريق الأمير محمد بن عبدالرحمن بن عبدالعزيز وطريق ابن العميد وطريق هارون الرشيد، بالقرب من الطريق الدائري الشرقي">
+          </picture>
+        </figure>
       </div>
     </div>
   </section>
@@ -503,20 +509,11 @@
           </a>
           <p class="ct__by">المسوّق الحصري: <b>القمم للعقارات</b></p>
 
-          <div class="license">
-            <a class="license__qr" data-ad-url href="https://eservicesredp.rega.gov.sa/public/OfficesBroker/ElanDetails/08dee73b-2738-45da-88b0-4c61b971b4ed" target="_blank" rel="noopener" aria-label="تحقّق من ترخيص الإعلان في الهيئة العامة للعقار">
-              <img data-qr src="img/ad-license-qr.png" width="140" height="142" loading="lazy" alt="رمز QR لترخيص الإعلان العقاري">
-            </a>
-            <div class="license__info">
-              <span class="license__label">رقم ترخيص الإعلان</span>
-              <span class="license__num" data-cfg="adLicense">7201051340</span>
-              <a class="license__link" data-ad-url href="https://eservicesredp.rega.gov.sa/public/OfficesBroker/ElanDetails/08dee73b-2738-45da-88b0-4c61b971b4ed" target="_blank" rel="noopener">تحقّق من الترخيص<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-            </div>
-          </div>
+          <p class="ct__license">رقم ترخيص الإعلان: <b data-cfg="adLicense">7201051340</b>
+            <a class="license__link" data-ad-url href="https://eservicesredp.rega.gov.sa/public/OfficesBroker/ElanDetails/08dee73b-2738-45da-88b0-4c61b971b4ed" target="_blank" rel="noopener">تحقّق من الترخيص<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
         </div>
 
         <form class="form reveal" id="lead-form" novalidate>
-          <h3 class="form__title">بياناتك</h3>
           <div class="field">
             <label for="f-name">الاسم</label>
             <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="اسمك الكريم">
@@ -538,7 +535,7 @@
           <button class="btn btn--primary btn--lg btn--block" type="submit">
             <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>أرسل الطلب عبر واتساب
           </button>
-          <p class="form__note">لا نشارك بياناتك مع أي طرف. الرسالة تُرسل من واتساب الخاص بك.</p>
+          <p class="form__note">تُرسل الرسالة من واتساب الخاص بك.</p>
         </form>
       </div>
     </div>
